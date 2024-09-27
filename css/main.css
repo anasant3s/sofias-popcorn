@@ -64,6 +64,16 @@ a {
     max-height: 36px;
     margin-right: 8px;
 }
+.header .cta-btn,
+.header .cta-btn:focus{
+        color:rgb(175, 131, 33);
+        background: 363636;
+        font-size: 14px;
+        padding: 8px 20px;
+        margin: 0 5x 0 30px;
+        border-radius: 4px;
+
+}
 
 /* Nav menu desktop = Responsivo */
 @media (min-width: 1200px) {
@@ -360,11 +370,37 @@ a {
   align-items: center;
   display: flex;
 }
+.hero .carousel-indicators{
+  cursor: pointer;
+  background: #444;
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  overflow: hidden;
+  border: 0;
+  border-radius: 50px;
+  transition: 0.3s;
+}
 
-
+.hero .carousel-indicators.active{
+  opacity: 1;
+  background: red;
+}
 
 @media (max-height:500px), (max-width:500px) {
     .hero .carousel {
         min-height: 100vh;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
