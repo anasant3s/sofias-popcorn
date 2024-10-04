@@ -1,29 +1,19 @@
-/* cores
-   rgb 231, 211, 186 
-   rgb 207, 176, 103
-   rgb 245, 242, 230
-   rgb 190, 129, 11
-   175,131, 33
-/* adobe color*/ 
-/* .header = classe #header = id */
-  
 :root {
-  --background-color: rgb(231, 211, 186) ; /*Variável css*/
-  --nav-fundo: rgb(34, 32, 32);
-  --texto-default:white;
-  --titulo-color: #5c2f05;
-  --nav-color: #462e03;
-  --nav-hover-color: #5e3902;
-  --nav-mobile-background: #000000;
-  --nav-dropdown-background: rgb(207, 176, 103);
-  --nav-dropdown-color: #ebebeb;
-  --nav-dropdown-hover-color: rgb(245, 242, 230); 
-  --nav-bg-topbar: rgb(175, 131, 33);
-  --nav-color2: #ebebeb;
-  --surface: white;
-  --cor-fundo: gray;
-  /* Elemento color só pra texto */
+    --background-color: rgb(167, 164, 164) ; /*Variável css*/
+    --nav-fundo: rgb(34, 32, 32);
+    --texto-default: #eeeeee;
+    --titulo-color: #ececec;
+    --nav-color: #eeeeee;
+    --nav-hover-color: #000000;
+    --nav-mobile-background: #ebebeb;
+    --nav-dropdown-background: #5bb8bb;
+    --nav-dropdown-color: #ebebeb;
+    --nav-dropdown-hover-color: #3fbbc0; 
+    --nav-bg-topbar: #c7c7c7;
+    --nav-color2: #ebebeb;
+    /* Elemento color só pra texto */
 }
+
 body {
     background: var(--background-color); /* cor fundo */
     color: var(--texto-default); /* cor dos textos */
@@ -64,15 +54,16 @@ a {
     max-height: 36px;
     margin-right: 8px;
 }
-.header .cta-btn,
-.header .cta-btn:focus{
-        color:rgb(175, 131, 33);
-        background: 363636;
-        font-size: 14px;
-        padding: 8px 20px;
-        margin: 0 5x 0 30px;
-        border-radius: 4px;
 
+.header .cta-btn,
+.header .cta-btn:focus {
+  color:#3fbbc0 ;
+  background: #363636;
+  font-size: 14px;
+  padding: 8px 20px;
+  margin: 0 5px 0 30px; /* 0 pra cima 5 pra direita 0 pra baixo 30 pra esquerda */
+  border-radius: 4px;
+  transition: 1s;
 }
 
 /* Nav menu desktop = Responsivo */
@@ -259,7 +250,7 @@ a {
   
     .navmenu .dropdown>.dropdown-active {
       display: block;
-      background-color: rgba(33, 37, 41, 0.03);
+      background-color: rgba(88, 106, 124, 0.03);
     }
   
     .mobile-nav-active {
@@ -303,6 +294,7 @@ a {
 }
 
 .hero img {
+     /* Imagem com sessão hero */
     position: absolute;
     display: block;
     width: 100%;
@@ -310,58 +302,58 @@ a {
     z-index: 1;
     inset: 0;
     object-fit: cover;
-
 }
 
-.hero .carousel-item{
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+.hero .carousel-item {
+    position: absolute;
+    inset: 0;  /* Tira todas as posições, centraliza */
+    background-size: cover; /* Sobrepõe */
+    background-position: center; /* Centraliza de fato */
+    background-repeat: no-repeat; /* A foto nao repete */
+    display: flex; /* Flexivel para de adaptar a telas menores */
+    justify-content: center; /* Centralizar todo o conteúdo */
+    align-items: flex-end;
+
 }
 
 .hero .container {
-  background: color-mix(in srgb, var(--cor-fundo), transparent 10%);
+  background: color-mix(in srgb, var(--nav-hover-color), transparent );
   position: relative;
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
-  border-top: 4px solid rgb(255, 255, 255);
+  border-top: 4px solid rgb(122, 179, 218);
   z-index: 3;
   margin-bottom: 50px;
 }
 
-
-@media (max-width: 1200px){
-  .hero .container{
+@media (max-width: 1200px) {
+  .hero .container {
     margin-left: 50px;
     margin-right: 50px;
   }
+
 }
 
-.hero h2{
+.hero h2 {
   margin-bottom: 20px;
-  font-size: 35px;
+  font-size: 36px;
   font-weight: 700;
 }
 
-.hero .carousel-control-prev{
+.hero .carousel-control-prev {
   justify-content: start;
 }
 
-.hero .carousel-control-next{
+.hero .carousel-control-next {
   justify-content: end;
 }
 
 .hero .carousel-control-next-icon,
-.hero .carousel-control-prev-icon{
-  background: blue;
-  font-size: 26PX;
-  color: red;
+.hero .carousel-control-prev-icon {
+  background: rgb(130, 130, 136);
+  font-size: 26px;
+  color: rgb(106, 228, 228);
   border-radius: 50px;
   transition: .3s;
   width: 54px;
@@ -370,7 +362,8 @@ a {
   align-items: center;
   display: flex;
 }
-.hero .carousel-indicators{
+
+.hero .carousel-indicators {
   cursor: pointer;
   background: #444;
   width: 12px;
@@ -382,25 +375,63 @@ a {
   transition: 0.3s;
 }
 
-.hero .carousel-indicators.active{
+.hero .carousel-indicators.active {
   opacity: 1;
   background: red;
 }
+
+.accent-backgrund {
+  
+}
+
+
+/*--------------------------------
+featured services section
+---------------------------------- */
+
+
+.featured-services .service-item{
+  background: #536aaaa5;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.548);
+  padding: 50px 30px;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+
+}
+
+.featured-services .service-item .icon{
+  margin-bottom: 10px;
+
+}
+
+.featured-services .service-item .icon i{
+  color: #3fbbc0;
+  font-size: 36px;
+  transition: ease-in-out 0.3s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-height:500px), (max-width:500px) {
     .hero .carousel {
         min-height: 100vh;
     }
 }
-
-
-
-
-
-
-
-
-
-
 
 
