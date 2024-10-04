@@ -380,6 +380,12 @@ a {
   background: red;
 }
 
+@media (max-height:500px), (max-width:500px) {
+  .hero .carousel {
+      min-height: 100vh;
+  }
+}
+
 /* .accent-backgrund {
   
 } */
@@ -449,9 +455,17 @@ featured services section
   z-index: -1;
 }
 
+.accent-background{
+  background: #000000;
+  color: whitesmoke;
+}
 
 
-/* global sections */
+
+
+/*----------------
+global sections
+------------------- */
 
 .section-title{
   text-align: center;
@@ -479,6 +493,15 @@ featured services section
   margin: auto;
 }
 
+.section-title p{
+  margin-bottom: 0;
+}
+
+/* ------- about ---------- */
+.about .content h3{
+  font-size: 1.75rem; /* mult 16 ou dividir 16*/
+  font-weight: 700;
+}
 
 
 section,
@@ -497,11 +520,5 @@ section,
 
 
 
-
-@media (max-height:500px), (max-width:500px) {
-    .hero .carousel {
-        min-height: 100vh;
-    }
-}
 
 
