@@ -12,6 +12,7 @@
     --nav-bg-topbar: #c7c7c7;
     --nav-color2: #ebebeb;
     /* Elemento color só pra texto */
+    --accent-color: #ffb54f; 
 }
 
 body {
@@ -425,7 +426,7 @@ featured services section
 }
 
 .featured-services .service-item h4 a{
-  color: red; 
+  color: rgb(231, 238, 239); 
 }
 
 .featured-services .service-item p{
@@ -499,10 +500,45 @@ global sections
 
 /* ------- about ---------- */
 .about .content h3{
-  font-size: 1.75rem; /* mult 16 ou dividir 16*/
+  font-size: 1.75rem; /* mult 16 ou dividir */
   font-weight: 700;
+  color: #072b2d;
+}
+.about .content ul{
+  list-style: none; /* tira as bolinhas */
+  padding: 0;
+
 }
 
+.about .content ul li{
+  padding: 10px 0 0 0;
+  display: flex;
+}
+
+.about .content ul i{
+  color: blue;
+  margin-right: 0.5rem;
+  line-height: 1.2;
+  font-size: 1.25rem;
+}
+
+.about .pulsating-play-btn{
+  position: absolute;
+  left: calc(50% - 47px);
+  top: calc(50% - 47px);
+}
+/* -----------------
+pulsating play button
+---------------------*/
+.pulsating-play-btn{
+  width: 94px;
+  height: 94px;
+  background: radial-gradient(var(--accent-color) 50%, color-mix(in srgb, var(--accent-color), transparent 75%) 52%);
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
 
 section,
  .section{
